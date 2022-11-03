@@ -11,6 +11,7 @@ import { BodySejaComponent } from './body-seja/body-seja.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { DoacaoComponent } from './doacao/doacao.component';
+import { AulaCapoeiraComponent } from './aula-capoeira/aula-capoeira.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DoacaoComponent } from './doacao/doacao.component';
     BodySejaComponent,
     HomeComponent,
     FooterComponent,
-    DoacaoComponent
+    DoacaoComponent,
+    AulaCapoeiraComponent
   ],
   imports: [
     BrowserModule,

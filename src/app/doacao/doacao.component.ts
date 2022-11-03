@@ -12,4 +12,7 @@ export class DoacaoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  copyPix(contribuicao:string){
+    alert("Obrigado, a chave para o pix foi copiada :)" + contribuicao);
+  }
 }
