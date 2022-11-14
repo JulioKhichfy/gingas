@@ -12,6 +12,9 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { DoacaoComponent } from './doacao/doacao.component';
 import { AulaCapoeiraComponent } from './aula-capoeira/aula-capoeira.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SendEmailService } from './send-email.service';
 
 @NgModule({
   declarations: [
@@ -26,9 +29,13 @@ import { AulaCapoeiraComponent } from './aula-capoeira/aula-capoeira.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    SendEmailService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

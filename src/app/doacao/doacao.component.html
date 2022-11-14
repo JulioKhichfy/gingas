@@ -6,45 +6,68 @@
         
     </div>
 </div>
-<div >
-    <div class="row" >
-        <div class="col" style="padding: 10px;">
-            <a data-bs-toggle="modal" data-bs-target="#modalVideos" 
-                style="padding: 10px;"
-                (click)="copyPix('10')" > 
-                <img src="assets/pix10.png" alt="" width="120" height="120">
-            </a>
-        
-            <a data-bs-toggle="modal" data-bs-target="#modalAgradecimento" 
-                style="padding: 10px;"
-                (click)="copyPix('50')"> 
-                <img src="assets/pix50.png" alt="" width="120" height="120">
-            </a>
-        
-            <a data-bs-toggle="modal" data-bs-target="#modalAgradecimento" 
-                style="padding: 10px;"
-                (click)="copyPix('100')"> 
-                <img src="assets/pix100.png" alt="" width="120" height="120">
-            </a>
-        
-            <a data-bs-toggle="modal" data-bs-target="#modalAgradecimento" 
-                style="padding: 10px;"
-                (click)="copyPix('250')"> 
-                <img src="assets/pix250.png" alt="" width="120" height="120">
-            </a>
-        
-            <a data-bs-toggle="modal" data-bs-target="#modalAgradecimento" 
-                style="padding: 10px;"
-                (click)="copyPix('500')"> 
-                <img src="assets/pix500.png" alt="" width="120" height="120">
-            </a>
-        </div>
+<div class="row" >
+    <div class="col" style="padding: 10px;">
+        <a data-bs-toggle="modal" data-bs-target="#modalVideos" 
+            style="padding: 10px;"
+            (click)="copyPix('10')" > 
+            <img src="assets/pix10.png" alt="" width="120" height="120">
+        </a>
+    
+        <a data-bs-toggle="modal" data-bs-target="#modalAgradecimento" 
+            style="padding: 10px;"
+            (click)="copyPix('50')"> 
+            <img src="assets/pix50.png" alt="" width="120" height="120">
+        </a>
+    
+        <a data-bs-toggle="modal" data-bs-target="#modalAgradecimento" 
+            style="padding: 10px;"
+            (click)="copyPix('100')"> 
+            <img src="assets/pix100.png" alt="" width="120" height="120">
+        </a>
+    
+        <a data-bs-toggle="modal" data-bs-target="#modalAgradecimento" 
+            style="padding: 10px;"
+            (click)="copyPix('250')"> 
+            <img src="assets/pix250.png" alt="" width="120" height="120">
+        </a>
+    
+        <a data-bs-toggle="modal" data-bs-target="#modalAgradecimento" 
+            style="padding: 10px;"
+            (click)="copyPix('500')"> 
+            <img src="assets/pix500.png" alt="" width="120" height="120">
+        </a>
     </div>
+</div>
 
-    <div class="row">
-        <div class="col">
-            <img src="assets/colabore/queroSerVoluntario.png" alt="" width="auto" height="800">
-            
+<div class="row">
+    <div class="col-12">
+        <img src="assets/colabore/queroSerVoluntario.png" alt="" width="auto" height="800">
+    </div>
+    <div class="col-6">
+        <span *ngIf="emailEnviado === 'success'">Email enviado! Iremos entrar em contato. Obrigado!</span>
+        <span *ngIf="emailEnviado === 'error'">Email não foi enviado! Pedimos desculpas pelo ocorrido. Por gentileza envie tente enviar para 'gingasweb@gmail.com' do seu cliente de email.</span>
+        <div>
+            <form class="contact-form" (submit)="sendEmail($event)">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Razão do contato</label>
+                    <input type="text" class="form-control" name="subject" value="Quero ser um voluntário">
+                </div>
+                <div class="form-group">
+                    <label for="message">Telefone</label>
+                    <textarea name="message" class="form-control"></textarea>
+                </div>
+                <input type="submit"class="btn btn-primary" value="Enviar">
+            </form>
         </div>
     </div>
 </div>
+
