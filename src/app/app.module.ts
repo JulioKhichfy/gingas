@@ -15,6 +15,8 @@ import { AulaCapoeiraComponent } from './aula-capoeira/aula-capoeira.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SendEmailService } from './send-email.service';
+import { InstitutoComponent } from './instituto/instituto.component';
+import { DindowndownComponent } from './dindowndown/dindowndown.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { SendEmailService } from './send-email.service';
     HomeComponent,
     FooterComponent,
     DoacaoComponent,
-    AulaCapoeiraComponent
+    AulaCapoeiraComponent,
+    InstitutoComponent,
+    DindowndownComponent
   ],
   imports: [
     BrowserModule,
