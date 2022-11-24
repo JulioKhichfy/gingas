@@ -1,5 +1,78 @@
-<app-body-videos></app-body-videos>
+<br><br><br><br>
+<div class="row" style="cursor: pointer;">
+    <div class="col">
+        <a data-bs-toggle="modal" data-bs-target="#modalVideos" (click)="addSrc('Instituto Gingas','https://www.youtube.com/embed/huGMTq4ue1A')"> 
+            <img src="assets/pagina01/img-video01.png" alt="" width="800" height="300">
+        </a>
+    </div>
+</div>
 
-<app-body-seja></app-body-seja>
+<div class="row" style="cursor: pointer;">
+    <div class="col">
+        <a data-bs-toggle="modal" data-bs-target="#modalVideos" (click)="addSrc('Din Down Down', 'https://www.youtube.com/embed/UHV05qZSpuI')"> 
+            <img src="assets/pagina01/img-video02.png" alt="" width="800" height="300"></a>
+    </div>
+</div>
 
-<app-aula-capoeira></app-aula-capoeira>
+<div class="row" style="cursor: pointer;">
+    <div class="col">
+        <a data-bs-toggle="modal" data-bs-target="#modalVideos" (click)="addSrc('Colabore Conosco', 'https://www.youtube.com/embed/UHV05qZSpuI')"> 
+            <img src="assets/pagina01/img-video03.png" alt="" width="800" height="300">
+        </a>
+    </div>
+</div>
+
+<!-- Modal video instituto gingas-->
+<div  class="modal fade" id="modalVideos" tabindex="-1" aria-labelledby="dindowndown" aria-hidden="true">
+    <div class="modal-dialog modal-lg" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalVideos">{{title}}</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="fecharModal()"></button>
+        </div>
+        <div class="modal-body">
+            <iframe id="myiframe" width="750" height="315" src="https://www.youtube.com/embed/huGMTq4ue1A"
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="fecharModal()"> Fechar</button>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="table-responsive-sm">
+    <table class="table">
+        <tr>
+            <a routerLink="/doacao"> 
+                <img class="img-responsive" src="assets/pagina01/doacao.png" alt="" width="auto" height="250">
+            </a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#dindowndown" > 
+                <img class="img-responsive" src="assets/pagina01/sejaNossoParceiro.png" alt="" width="auto" height="250">
+            </a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#colabore"> 
+                <img class="img-responsive" src="assets/pagina01/sejaNossoVoluntario.png" alt="" width="auto" height="250">
+            </a>
+        </tr>
+    </table>
+</div>
+
+<div class="table-responsive-sm">
+    <table class="table">
+        <tr>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#institutoGingas" > 
+                <img src="assets/pagina01/aulaCapoeira.png" alt="" width="auto" height="250">
+            </a>
+            <div class="card" style="width: 25rem; height: 235px; border:0">
+                <div class="card-body">
+                    <h5 class="card-title">QUER FAZER AULA DE CAPOEIRA ?</h5>
+                    <p class="card-text">ENTRE EM CONTATO CONOSCO</p>
+                    <br>
+                    <a href="#" class="btn "> <img src="assets/pagina01/btn-whatsapp.png" alt="" width="auto" height="auto"></a>
+                    <a href="#" class="btn "> <img src="assets/pagina01/btn_email.png" alt="" width="auto" height="auto"></a>
+                    <a href="#" class="btn "> <img src="assets/pagina01/btn-enviar.png" alt="" width="auto" height="auto"></a>
+                </div>
+            </div>
+        </tr>
+    </table>
+</div>
+
